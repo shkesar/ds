@@ -5,9 +5,14 @@
 int main(int argc, char const *argv[])
 {
 	stacked_t st = create_stack (8);
-	push (st, 10);
-	printf("%d\n", pop(st));
-	push (st, 20);
-	printf("%d\n", pop(st));
+
+	push_int (st, 10);
+	push_int (st, 20);
+	push_char (st, 'S');
+
+	printf("%c\n", pop_string(st));
+	printf("%d\n", pop_int(st));;
+	printf("%d\n", pop_int(st));
+
 	return 0;
 }
